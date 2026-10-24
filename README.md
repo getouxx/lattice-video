@@ -105,6 +105,28 @@ lattice-video/
 
 其余行为——时间轴、弹簧、扫光 shader、排版、层次缩放淡入淡出——与 folia 完全一致。
 
+### 上游同步记录
+
+`vendor/folia/src/` 已与上游 `chthollyphile/folia-major` **main 分支提交
+`1f6d0f468f5bc81b23a8b40ad7ca96ccd4b1ecbe`**（2026-10-24）逐文件核对：
+
+| 项 | 结果 |
+| --- | --- |
+| vendored 文件总数 | 45 |
+| 与上游逐字节一致 | 43 |
+| 仅因本工具补丁而不同 | 2（即上面两处） |
+
+同步时上游新增的 9 个文件差异（`types.ts`、`types/onlineMusic.ts`、`visualizer/definition.ts`、
+`visualizer/backgrounds/definition.ts`、`utils/appPlaybackGuards.ts`、`utils/lyrics/lyricSources.ts`、
+`i18n/locales/{en,in,zh-CN}.ts`）**均为与 lattice 渲染无关的功能新增**（智能动感/beat FX、歌曲交接
+songHandoff、personal FM、翻译文案），已并入 vendor。
+
+**A/B 字节级验证**：用同步前的 vendor 与同步后的 vendor 各自打包，渲染同一批时间点（t=1/8/20/40s），
+输出 PNG **逐字节完全相同**——即本次同步对渲染结果零影响。
+
+复现核对（需能访问 GitHub）：`python compare-vendor.py`（读取上游 tree 的 blob SHA 与本地
+`git hash-object` 比对，无需下载整个仓库）。
+
 ## 支持的歌词格式
 
 走 folia 原版解析器，按内容自动识别（`detectTimedLyricFormat`）：
