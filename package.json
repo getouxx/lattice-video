@@ -1,0 +1,25 @@
+{
+    "name": "folia-lattice-video",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "description": "把 folia-major 的 lattice 歌词播放样式离线渲染为 MP4 视频的独立工具（音频 + 歌词文件 -> 全曲歌词动画视频）",
+    "scripts": {
+        "build": "node src/build.mjs",
+        "render": "node src/render.mjs"
+    },
+    "dependencies": {
+        "@applemusic-like-lyrics/ttml": "*",
+        "@chenglou/pretext": "^0.0.9",
+        "@xmldom/xmldom": "*",
+        "esbuild": "*",
+        "framer-motion": "^13.4.3",
+        "i18next": "*",
+        "i18next-browser-languagedetector": "*",
+        "lucide-react": "*",
+        "pixi.js": "^8.21.0",
+        "playwright": "*",
+        "react": "^19.0.0",
+        "react-i18next": "*"
+    }
+}

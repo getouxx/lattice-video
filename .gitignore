@@ -1,0 +1,24 @@
+# --- Node / 依赖 ---
+node_modules/
+
+# --- 构建产物 (可随时 npm run build 重新生成) ---
+dist/
+*.tsbuildinfo
+
+# --- 渲染中间产物 / 输出 (大型临时文件) ---
+.render-work/
+# 保留 output/ 内的成片样例; 如需忽略全部输出, 取消下行注释
+# output/*.mp4
+
+# --- Python 虚拟环境 + 便携工具 (仅本机) ---
+dl/
+.venv/
+__pycache__/
+*.pyc
+
+# --- 系统/编辑器 ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

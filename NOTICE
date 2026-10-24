@@ -1,0 +1,42 @@
+folia-lattice-video — 版权与许可说明
+=====================================
+
+本项目 `folia-lattice-video` 是 folia-major 音乐播放器中「lattice 歌词样式」的独立离线渲染工具。
+
+Copyright (C) 2025  getouxx (2165945410@qq.com)
+
+本项目的原创部分（`src/`、`render.ps1`、`render.cmd`、`.gitignore`、`package.json`、`README.md`，
+以及 `docs/`、`output/` 中的样例产物）按 GNU Affero General Public License v3.0 发布，
+完整许可文本见同目录下的 `LICENSE`。
+
+上游代码声明
+------------
+
+`vendor/folia/` 目录内所有文件是从 GitHub 仓库
+    https://github.com/chthollyphile/folia-major
+拷贝的 folia-major **原版渲染相关源码**，版权归其各自作者所有，按
+GNU Affero General Public License v3.0 许可，完整许可文本同样是同目录下的 `LICENSE`。
+
+改动说明
+--------
+`vendor/folia/` 内有两处为适配无 GPU（SwiftShader 软件渲染）环境进行的、标注为
+`[lattice-video 兼容补丁]` 的最小改动（关 MSAA、停用两层 BlurFilter），详细说明见 `README.md` 的
+「差异说明」一节。
+
+联系方式
+--------
+GitHub: https://github.com/getouxx
+邮箱:   2165945410@qq.com
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
